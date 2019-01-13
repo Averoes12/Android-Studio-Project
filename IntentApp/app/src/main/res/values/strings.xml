@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">IntentApp</string>
+    <string name="move_activity">Move activity</string>
+    <string name="first_activity">First activity</string>
+    <string name="data_recived">data recived</string>
+    <string name="move_avtiviity">Move avtiviity</string>
+    <string name="call_me">call me</string>
+    <string name="home">home</string>
+    <string name="choose">choose</string>
+    <string name="your_food">Your Food</string>
+    <string name="back">Back</string>
+    <string name="text">text</string>
+    <string name="choose_your_food">Choose Your Food</string>
+    <string name="choose_number">Choose Number</string>
+    <string name="_70">70</string>
+    <string name="_50">50</string>
+    <string name="_20">20</string>
+</resources>
