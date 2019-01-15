@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Choice" />
+    <RadioGroup
+        android:id="@+id/choice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/bb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/beef_burger" />
+        <RadioButton
+            android:id="@+id/yk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/yakiniku" />
+        <RadioButton
+            android:id="@+id/tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/teriyaki_beef" />
+        <RadioButton
+            android:id="@+id/yo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/yokado" />
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/close"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="0.5"
+            android:text="@string/close" />
+        <Button
+            android:id="@+id/choose"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="0.5"
+            android:text="@string/choose" />
+    </LinearLayout>
+</LinearLayout>

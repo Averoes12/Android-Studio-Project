@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragmnent">Home Fragmnent</string>
+    <string name="fragment_kategori">fragment kategori</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="category">category</string>
+    <string name="lifestyle_category">lifestyle category</string>
+    <string name="category_name">category name</string>
+    <string name="category_description">category description</string>
+    <string name="profile">profile</string>
+    <string name="show_dialog">show dialog</string>
+    <string name="choose_your_choice">Choose your Choice</string>
+    <string name="beef_burger">Beef Burger</string>
+    <string name="close">close</string>
+    <string name="choose">Choose</string>
+    <string name="sir_alex_ferguson">Sir alex ferguson</string>
+    <string name="teriyaki_beef">Teriyaki Beef</string>
+    <string name="yokado">Yokado</string>
+    <string name="yakiniku">Yakiniku</string>
+</resources>
