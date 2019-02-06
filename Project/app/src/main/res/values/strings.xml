@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="panjang">Panjang</string>
+    <string name="lebar">Lebar</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Portal Berita</string>
+    <string name="judul_berita">Judul Berita</string>
+    <string name="penulis">Penulis</string>
+    <string name="tanggal_postng">Tanggal Postng</string>
+    <string name="image">Image</string>
+</resources>

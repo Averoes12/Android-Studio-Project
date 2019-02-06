@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@mipmap/ic_search"
+        app:showAsAction="collapseActionView|ifRoom"
+        app:actionViewClass="android.widget.SearchView" />
+
+    <group android:menuCategory="container">
+        <item android:id="@+id/menu1"
+            android:title="Menu 1"
+            android:icon = "@mipmap/baseline_announcement"
+            app:showAsAction="always" />
+        <item android:id="@+id/menu2"
+            android:title="Menu 2" />
+    </group>
+</menu>
+
+    <!--
+    collapseActionView menunjukkan bahwa icon bersifat collapsble
+    atau dapat disembuyikan
+
+    ifRoom berguna untuk menampilkan itm ketika ada ruang
+    -->

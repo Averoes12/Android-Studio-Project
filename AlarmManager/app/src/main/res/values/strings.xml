@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AlarmManager</string>
+    <string name="date_reminder">Date Reminder</string>
+    <string name="set_date">Set Date</string>
+    <string name="set_time">Set Time</string>
+    <string name="set_message">Set Message</string>
+    <string name="set_date_reminder">Set Date Reminder</string>
+    <string name="set_alarm_reminder">Set Alarm Reminder</string>
+    <string name="set_alarm">Set Alarm</string>
+    <string name="alarm">Alarm</string>
+    <string name="set_message1">Set Message</string>
+    <string name="cancel_alarm">Cancel alarm</string>
+</resources>
