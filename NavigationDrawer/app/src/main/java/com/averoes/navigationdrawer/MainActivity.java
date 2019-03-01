@@ -1,5 +1,6 @@
 package com.averoes.navigationdrawer;
 
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,34 +13,80 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    CircleImageView imgProfile;
+    String profile_img_url = "https://lh3.googleusercontent.com/-4qy2DfcXBoE/AAAAAAAAAAI/AAAAAAAABi4/rY-jrtntAi4/s640-il/photo.jpg";
+
+    DrawerLayout drawer;
+    Toolbar toolbar;
+    ActionBarDrawerToggle toogle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle("Home");
+
+        if (savedInstanceState == null){
+            Fragment currentFragment = new HomeFragment();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.content_main, currentFragment)
+                    .commit();
+        }
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                        .setAction("Action", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Toast.makeText(MainActivity.this, "Welcome To Snackbar", Toast.LENGTH_SHORT).show();
+                            }
+                        }).show();
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        drawer =  findViewById(R.id.drawer_layout);
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        imgProfile = navigationView.getHeaderView(0).findViewById(R.id.imageView);
+        Glide.with(MainActivity.this).load(profile_img_url).into(imgProfile);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        toogle = new ActionBarDrawerToggle(this, drawer, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
+        drawer.addDrawerListener(toogle);
+        toogle.syncState();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        drawer.removeDrawerListener(toogle);
     }
 
     @Override
@@ -80,9 +127,25 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        Bundle bundle = new Bundle();
+        Fragment fragment = null;
+        String title = "";
+        if (id == R.id.nav_home){
+            title = "Home";
+            fragment = new HomeFragment();
+
+        } if (id == R.id.nav_camera) {
             // Handle the camera action
+            title = "Camera";
+            fragment = new PageFragment();
+            bundle.putString(PageFragment.EXTRAS, "Camera");
+            fragment.setArguments(bundle);
+
         } else if (id == R.id.nav_gallery) {
+            title = "Gallery";
+            fragment = new PageFragment();
+            bundle.putString(PageFragment.EXTRAS, "Gallery");
+            fragment.setArguments(bundle);
 
         } else if (id == R.id.nav_slideshow) {
 
@@ -94,7 +157,14 @@ public class MainActivity extends AppCompatActivity
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (fragment != null){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_main, fragment)
+                    .commit();
+        }
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (getSupportActionBar()!= null)
+            getSupportActionBar().setTitle(title);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

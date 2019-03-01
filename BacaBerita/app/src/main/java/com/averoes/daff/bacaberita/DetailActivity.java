@@ -35,6 +35,8 @@ public class DetailActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         showDetailBerita();
+
+
     }
 
     private void showDetailBerita(){

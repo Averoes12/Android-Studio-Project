@@ -1,12 +1,10 @@
 package com.averoes.daff.bacaberita;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import com.averoes.daff.bacaberita.adapter.BeritaAdapter;
@@ -23,6 +21,8 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
     //deklarasi widget
     public RecyclerView recyclerView;
+    static final String STATE = "State";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
         showRecyclerList();
+
+
     }
 
     public void showRecyclerList(){

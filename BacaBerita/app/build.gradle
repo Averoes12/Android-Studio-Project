@@ -9,7 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "BASE_URL", '"http://172.20.30.19/portal berita/"')
+        buildConfigField("String", "BASE_URL", '"http://192.168.60.37/portal berita/"')
 
     }
     buildTypes {

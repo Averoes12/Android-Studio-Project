@@ -5,34 +5,61 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home"/>
+        <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="@string/camera" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="@string/gallery" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="@string/slideshow" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="@string/tools" />
+        <item
+            android:id="@+id/nav_cart"
+            android:title="@string/cart"
+            android:icon="@drawable/ic_shopping_cart"/>
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="@string/communicate">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="@string/share" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="@string/send" />
         </menu>
+    </item>
+
+    <item android:title="@string/maps">
+        <menu>
+            <item
+                android:id="@+id/nav_maps"
+                android:title="@string/map"
+                android:icon="@drawable/ic_maps"/>
+            <item
+                android:id="@+id/nav_hotel"
+                android:title="@string/hotel"
+                android:icon="@drawable/ic_hotel"/>
+            <item
+                android:id="@+id/nav_subway"
+                android:icon="@drawable/ic_subway"
+                android:title="@string/subway"/>
+
+        </menu>
+
     </item>
 
 </menu>

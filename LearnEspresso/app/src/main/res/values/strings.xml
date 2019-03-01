@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Learn Espresso</string>
+    <string name="hasil_cetak_teks">Hasil Cetak Teks</string>
+    <string name="input_teks">Input Teks</string>
+    <string name="ubah_text">Ubah text</string>
+    <string name="pindah_activity">Pindah activity</string>
+    <string name="result_view">Result View</string>
+    <string name="result">HaHaHa</string>
+</resources>
