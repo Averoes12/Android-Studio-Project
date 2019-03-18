@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">Baca Berita</string>
     <string name="judul_berita">Judul Berita</string>
-    <string name="penulis">Penulis</string>
     <string name="tanggal_posting">Tanggal Posting</string>
     <string name="tanggal_detail">Tanggal</string>
     <string name="penulis_detail">Penulis</string>
     <string name="konten_berita">Konten Berita</string>
     <string name="judul_item">Judul</string>
+    <string name="penulis">Penulis</string>
+
 </resources>
